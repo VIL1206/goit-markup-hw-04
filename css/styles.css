@@ -80,6 +80,21 @@ a {
     letter-spacing: 0.02em;
     padding: 24px 0;
     display: block;
+    transition: color cubic-bezier (0.4, 0, 0.2, 1);
+}
+.current {
+    position: relative;
+    color: #404BBF;
+}
+.current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    background-color: #404BBF;
+    border-radius: 2px;
+    height: 4px;
+    width: 100%;
 }
 .header .header-titel .menu a:hover {
     color: #404bbf
@@ -100,6 +115,7 @@ a {
     line-height: 1.5;
     letter-spacing: 0.02em;
     padding: 24px 0;
+    transition: color cubic-bezier (0.4, 0, 0.2, 1);
 }
 .address-header a:hover {
     color: #404bbf
@@ -113,6 +129,10 @@ a {
 /**==========MAIN-1==========**/
 .main-titel {
     background: var(--NAVY-BLUE, #2E2F42);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     padding-top: 188px;
     padding-bottom: 188px;
 }
@@ -179,6 +199,18 @@ a {
 }
 .advantages-list-title {
     width: calc((100% - 72px)/4);
+}
+
+.icon-conteiner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F4F4FD;
+    width: 264px;
+    height: 112px;
+    border-radius: 4px;
+    border: 1px solid #8E8F99;
+    margin-bottom: 8px;
 }
 
 .list-title {
@@ -251,8 +283,35 @@ a {
     line-height: 1.5;
     letter-spacing: 0.02em;
     margin: 0;
+    margin-bottom: 8px;
 }
-
+.icon-soc-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+.icon-title {
+    width: 40px;
+    height: 40px;
+}
+.icon-gruup {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4D5AE5;
+    border-radius: 50%;
+}
+.icon-gruup:hover {
+    background-color: #31d0aa;
+}
+.icon-gruup:focus {
+    background-color: #31d0aa;
+}
+.icon-work-soc {
+    fill: #FFF;
+}
 
 
 
@@ -298,6 +357,35 @@ a {
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
+.list-portfolio-team {
+
+}
+.list-portfolio-team:hover .portfolio-cover-list{
+    transform: translateY(0);
+}
+.portfolio-cover-slim {
+    position: relative;
+    overflow: hidden;
+}
+.portfolio-cover-list {
+    position: absolute;
+    top: 0;
+    background-color: #4D5AE5;
+    height: 100%;
+    display: flex;
+    padding: 40px 32px 0 32px;
+    transform: translateY(100%);
+    transition: transform 300ms linear;
+}
+.portfolio-cover-text {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+}
+
+
+
 /**====================**/
 
 
@@ -306,10 +394,20 @@ a {
 
 
 /**==========FOOTER==========**/
-.footer-flow {
+.footer {
     background: var(--NAVY-BLUE, #2E2F42);
     padding-top: 100px;
-    padding-bottom: 100px
+    padding-bottom: 100px;
+}
+.footer-flow {
+    width: 1158px;
+    padding: 0 15px;
+    margin: 0 auto;
+    display: flex;
+    align-items: baseline;
+}
+.conteiner-footer-soc {
+    margin-right: 120px;
 }
 .logo-footer {
     color: #4d5ae5;
@@ -342,6 +440,24 @@ a {
     letter-spacing: 0.02em;
     width: 264px;
 }
+.footer-icon {
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+.social-link-text{
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    margin-bottom: 16px;
+    display: flex;
+}
+
+
+
 
 
 /**====================**/
