@@ -35,7 +35,8 @@ a {
 
 /**==========HEADER==========**/
 .header {
-    border-bottom: 1px solid #e7e9fc
+    border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .header-conteiner {
     display: flex;
@@ -80,7 +81,7 @@ a {
     letter-spacing: 0.02em;
     padding: 24px 0;
     display: block;
-    transition: color cubic-bezier (0.4, 0, 0.2, 1);
+    transition color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .current {
     position: relative;
@@ -135,6 +136,7 @@ a {
     background-size: cover;
     padding-top: 188px;
     padding-bottom: 188px;
+    max-width: 1440px;
 }
 
 .main-effective {
@@ -164,6 +166,7 @@ a {
     align-items: center;
     margin: 0 auto;
     margin-top: 48px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .main-titel button:hover {
     background-color: #404BBF
@@ -304,13 +307,14 @@ a {
     border-radius: 50%;
 }
 .icon-gruup:hover {
-    background-color: #31d0aa;
+    background-color: #404bbf;
 }
 .icon-gruup:focus {
-    background-color: #31d0aa;
+    background-color: #404bbf;
 }
 .icon-work-soc {
-    fill: #FFF;
+    fill: #f4f4fd ;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -358,15 +362,20 @@ a {
     letter-spacing: 0.02em;
 }
 .list-portfolio-team {
+    
+}
+.list-portfolio-team:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 
 }
 .list-portfolio-team:hover .portfolio-cover-list{
-    transform: translateY(0);
+    transform: translateY(0%);
 }
 .portfolio-cover-slim {
     position: relative;
     overflow: hidden;
 }
+
 .portfolio-cover-list {
     position: absolute;
     top: 0;
@@ -375,8 +384,9 @@ a {
     display: flex;
     padding: 40px 32px 0 32px;
     transform: translateY(100%);
-    transition: transform 300ms linear;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .portfolio-cover-text {
     font-size: 16px;
     line-height: 1.5;
@@ -454,6 +464,11 @@ a {
     color: #ffffff;
     margin-bottom: 16px;
     display: flex;
+}
+.icon-soc-list-footer {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
 }
 
 
