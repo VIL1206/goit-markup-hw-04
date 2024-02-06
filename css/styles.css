@@ -141,6 +141,7 @@ a {
     padding-top: 188px;
     padding-bottom: 188px;
     max-width: 1440px;
+    margin: 0 auto;
 }
 .main-effective {
     color: var(--WHITE, #FFF);
